@@ -1,0 +1,63 @@
+﻿<Window x:Class="StructuresAndAlgorithms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StructuresAndAlgorithms"
+        mc:Ignorable="d"
+        Title="Algorithms in action" Height="400" Width="800">
+    <Grid ShowGridLines="False" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"></Border>
+        <Canvas x:Name="TopLeftCanvas" Grid.Row="0" Grid.Column="0">
+                <GroupBox Header="Select the algorithm" Canvas.Top="5" Canvas.Right="10">
+            <StackPanel x:Name="AlgorithmStackPanel" Canvas.Top="0" Canvas.Right="15">
+                <StackPanel.Resources>
+                    <Style TargetType="RadioButton">
+                        <Setter Property="Margin" Value="0,10,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <RadioButton GroupName="Algorithm" Content="Bubble Sort" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="Algorithm" Content="Insertion Sort" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="Algorithm" Content="Selection Sort" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="Algorithm" Content="Quick Sort" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="Algorithm" Content="Merge Sort" Checked="RadioButton_Checked"/>
+            </StackPanel>
+                </GroupBox>
+            <StackPanel x:Name="FillingListStackPanel" Canvas.Top="0" Canvas.Left="15">
+                <Label x:Name="AddOneItemLable" Content="Add one item with the value:"/>
+                <TextBox x:Name="AddOneItemTextBox" ToolTip="Maximum items in list: 25"/>
+                <Button x:Name="AddOneItemButton" Content="Add item" Click="AddOneItemButton_Click"/>
+                <Label x:Name="AddFewItemsLable" Content="Add few items into the list"/>
+                <TextBox x:Name="AddFewItemsTextBox" ToolTip="Maximum items in list: 25"/>
+                <Button x:Name="AddFewItemsButton" Content="Add few items" Click="AddFewItemsButton_Click"/>
+                <Button x:Name="ClearBottomCanvas" Content="Clear" Margin="0,15,0,0" Click="ClearBottomCanvas_Click"/>
+            </StackPanel>
+        </Canvas>
+        <Canvas x:Name="BottomCanvas" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+        </Canvas>
+        <Canvas x:Name="RightCanvas" Grid.Column="1" Grid.Row="0" >
+            <GroupBox Header="Result of the algorithm" Canvas.Top="5" Canvas.Right="40">
+                <StackPanel>
+                    <Label x:Name="ItemsCountLabel" Content="Items in the list: "/>
+                    <Label x:Name="TimeSpentLabel" Content="Time spent: "/>
+                    <Label x:Name="SwapCounterLabel" Content="Swap Counter: "/>
+                    <Label x:Name="SwapsCheck" Content="Swaps Check: "/>
+                    <Label x:Name="IterationTimeDeleyLabel" Content="Iteration time delay: "/>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel x:Name="TimeSelector" Canvas.Top="5" Canvas.Left="30">
+                <Label Content="Time delay"></Label>
+                <Slider x:Name="IterationTimeSlider" Maximum="100" Minimum="0" Orientation="Vertical" Height="100" Value="50" IsSelectionRangeEnabled="True" HorizontalAlignment="Center" ValueChanged="SliderValue"/>
+                <TextBlock x:Name="IterationTimeTextBlock" Text="{Binding ElementName=IterationTimeSlider, Path=Value}" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</Window>
