@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StructuresAndAlgorithms.Algorithms
 {
-    class InsertionSort<T> : BaseAlgorithm<T> where T: IComparable
+    public class InsertionSort<T> : BaseAlgorithm<T> where T: IComparable
     {
         public InsertionSort() { }
         public InsertionSort(IEnumerable<T> items) : base(items) { }
