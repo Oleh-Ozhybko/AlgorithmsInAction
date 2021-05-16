@@ -50,7 +50,8 @@ namespace StructuresAndAlgorithms
                     AlgorithmStart(insertion);
                     break;
                 case "Selection Sort":
-                    MessageBox.Show("Selection Sort not implemented");
+                    var sekection = new SelectionSort<Elements>(items);
+                    AlgorithmStart(sekection);
                     break;
                 case "Quick Sort":
                     MessageBox.Show("Quick Sort not implemented");

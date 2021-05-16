@@ -19,3 +19,4 @@ C:\Users\User\source\repos\StructuresAndAlgorithms\StructuresAndAlgorithms\obj\D
 C:\Users\User\source\repos\StructuresAndAlgorithms\StructuresAndAlgorithms\obj\Debug\net5.0-windows\ref\StructuresAndAlgorithms.dll
 C:\Users\User\source\repos\StructuresAndAlgorithms\StructuresAndAlgorithms\obj\Debug\net5.0-windows\StructuresAndAlgorithms.pdb
 C:\Users\User\source\repos\StructuresAndAlgorithms\StructuresAndAlgorithms\obj\Debug\net5.0-windows\StructuresAndAlgorithms.genruntimeconfig.cache
+C:\Users\User\source\repos\StructuresAndAlgorithms\StructuresAndAlgorithms\obj\Debug\net5.0-windows\StructuresAndAlgorithms.csprojAssemblyReference.cache
