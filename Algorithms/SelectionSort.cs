@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StructuresAndAlgorithms.Algorithms
 {
-    class SelectionSort<T> : BaseAlgorithm<T> where T: IComparable
+    public class SelectionSort<T> : BaseAlgorithm<T> where T: IComparable
     {
         public SelectionSort(IEnumerable<T> items) : base(items) { }
         public SelectionSort() { }
